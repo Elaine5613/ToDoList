@@ -1,0 +1,11 @@
+<div class="greeting">{{ greeting }}</div>
+
+<app-pomodoro *ngIf="mode == 'pomodoro'"></app-pomodoro>
+<app-todolist *ngIf="mode == 'todolist'"></app-todolist>
+<app-mypage *ngIf="mode == 'mypage'"></app-mypage>
+
+<div class="modes">
+  <button class="mode" (click)="changeModeToPomodoro()">Pomodoro</button>
+  <button class="mode" (click)="changeModeToToDoList()">ToDo</button>
+  <button class="mode" (click)="changeModeToMyPage()">My page</button>
+</div>

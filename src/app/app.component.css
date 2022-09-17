@@ -1,0 +1,18 @@
+p {
+  font-family: Lato;
+}
+
+.greeting {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modes {
+  display: flex;
+}
+
+.modes .mode {
+  width: calc(100% / 3);
+}

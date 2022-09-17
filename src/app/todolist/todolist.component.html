@@ -1,0 +1,21 @@
+<div class="todo-input">
+  <input
+    type="text"
+    name="name"
+    id="name"
+    (input)="getInput($event)"
+    required
+  />
+  <button (click)="addToDo()">Add new todo</button>
+</div>
+
+<div class="todo-list">
+  <fieldset>
+    <legend>Check things you have done:</legend>
+
+    <div *ngFor="let todo of todoList">
+      <input type="checkbox" id="scales" name="scales" checked />
+      <label for="scales">{{ todo }}</label>
+    </div>
+  </fieldset>
+</div>
