@@ -14,12 +14,18 @@ export class TodolistComponent implements OnInit {
 
   addToDo() {
     let inputText = document.getElementById('todo-input');
-    if (inputText) {
-      let todo = (inputText as HTMLInputElement).value;
+    let todo = (inputText as HTMLInputElement).value;
+    if (todo !== '') {
       this.todoList.push(todo);
     }
     (inputText as HTMLInputElement).value = '';
   }
 
-  deleteToDo() {}
+  deleteToDo(todo) {
+    let labelText = document.getElementById(todo);
+    if (labelText) {
+      let item = (labelText as HTMLLabelElement).textContent;
+      this.todoList = this.todoList.filter((todo) => todo != item);
+    }
+  }
 }

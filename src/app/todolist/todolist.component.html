@@ -9,8 +9,8 @@
 
     <div *ngFor="let todo of todoList">
       <input type="checkbox" id="todo-check" name="todo-check" />
-      <label for="todo-check" id="todo-label-todo">{{ todo }}</label>
-      <button (click)="deleteToDo()">delete</button>
+      <label for="todo-check" [attr.id]="todo">{{ todo }}</label>
+      <button (click)="deleteToDo(todo)">delete</button>
     </div>
   </fieldset>
 </div>
