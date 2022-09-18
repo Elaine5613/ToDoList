@@ -7,17 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodolistComponent implements OnInit {
   todoList = [];
-  todoItem: string;
 
   constructor() {}
 
   ngOnInit() {}
 
-  getInput(event) {
-    this.todoItem = event.data;
+  addToDo() {
+    let inputText = document.getElementById('todo-input');
+    if (inputText) {
+      let todo = (inputText as HTMLInputElement).value;
+      this.todoList.push(todo);
+    }
+    (inputText as HTMLInputElement).value = '';
   }
 
-  addToDo() {
-    this.todoList.push(this.todoItem);
-  }
+  deleteToDo() {}
 }
